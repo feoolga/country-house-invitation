@@ -1,0 +1,54 @@
+/* Календарь */
+.сalendar {
+    max-width: 100%;
+    /* font: monospace; */
+    /* line-height: 1.2em; */
+    font-size: 25px;
+    background-color: rgb(217, 245, 133);
+    padding: 10px 0;
+    /* text-align: center; */
+    margin: 0 auto;
+  }
+  #calendar thead tr:last-child {
+    font-size: small;
+    color: rgb(85, 85, 85);
+  }
+  #calendar thead tr:nth-child(1) td:nth-child(2) {
+    color: rgb(50, 50, 50);
+  }
+  #calendar thead tr:nth-child(1) td:nth-child(1):hover, #calendar2 thead tr:nth-child(1) td:nth-child(3):hover {
+    cursor: pointer;
+  }
+  #calendar tbody td {
+    color: rgb(44, 86, 122);
+    cursor: pointer;
+  }
+  .clicked {
+    background-color: rgb(168, 3, 3);
+  }
+  #calendar tbody td:nth-child(n+6), #calendar .holiday {
+    color: rgb(168, 3, 3);
+  }
+  #calendar tbody td.today {
+    background: rgb(12, 92, 1);
+    color: #fff;
+  }
+
+  .сalendar .row{
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: start;
+  }
+
+.calendar-text{
+	font-family: 'Neucha', cursive;
+	font-size: 20px;
+	color: rgb(124,155,28);
+  margin-bottom: 20px;
+}
+
+.calendar-text p{
+	line-height: 1.3;
+}
+

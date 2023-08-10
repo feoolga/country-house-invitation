@@ -1,0 +1,35 @@
+.weather-button{
+	background-color: rgb(127, 164, 189);
+	padding: 20px;
+
+}
+
+.time__weather{
+	display: inline-block;
+	font-family: 'Neucha', cursive;
+	display: inline-block;
+	font-size: 30px;
+	color: rgb(44, 86, 122);
+	/* transform-origin: bottom left; */
+	transition: transform 0.2s;
+	padding-left: 7px;
+	position: relative;
+}
+
+.time__weather::after{
+	content: '';
+	background-image: url(../img/cloud.gif);
+	background-size:60px;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	top: -10px;
+	right: 10px;
+	transition: translate 0.4s, opacity 0.4s;
+}
+
+.time__weather:hover::after{
+	transform: translate(0, -30px);
+	opacity: 0;
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('_head.html',{
+        "title": "Главная",
+    })
+<body>
+    <div class="wrapper">
+        <section class="hero">
+            <div class="hero__logo" style="background-image: url('img/hand-drawn-flat-cottage-logo-template/logo_1.png')"></div>
+            <div class="hero__layers">
+                <div class="layers__item layer-1" style="background-image: url('img/house/1.png');"></div>
+                <div class="layers__item layer-12" style="background-image: url('img/house/3.png');"></div>
+                <div class="layers__item layer-13" style="background-image: url('img/house/4.png');"></div>
+                <div class="layers__item layer-2" style="background-image: url('img/house/2.png');"></div>
+                <div class="layers__item layer-3">
+                    <div class="hero__content">
+                        <h1>
+                            Дорогие Андрюха и Аня,<br> приезжайте к нам :)
+                        </h1>
+                    </div>
+                </div>
+                <div class="layers__item layer-6" style="background-image: url('img/layer-5.png');"></div>
+            </div>
+        </section>
+
+        @@include('_header.html',{})
+
+        <main id="programma">
+			<div class="title-text-light">
+				<div class="container">У нас можно:</div>
+			</div>
+			<div class="programma" style="background-image: url('img/Fon_4.jpg');">
+				<div class="list">
+					<div class="programma-container">
+						<div class="row list__row">
+							<div class="col program-elem">
+								<div class="col-image">
+                                    <img src="img/list/1_img.jpg" alt="">
+								</div>
+								<div class="col-text">Погулять на природе</div>
+							</div>
+
+							<div class="col program-elem">
+								<div class="col-image">
+                                    <img src="img/list/2_img.jpg" alt="">
+								</div>
+								<div class="col-text">Покататься на велосипедах</div>
+							</div>
+
+                            <div class="col program-elem">
+								<div class="col-image">
+                                    <img src="img/list/3_img.jpg" alt="">
+								</div>
+								<div class="col-text">Купаться и загорать</div>
+							</div>
+
+							<div class="col program-elem">
+								<div class="col-image">
+                                    <img src="img/list/4_img.jpg" alt="">
+								</div>
+								<div class="col-text">Сделать домашний лимонад</div>
+							</div>
+
+							<div class="col program-elem">
+								<div class="col-image">
+                                    <img src="img/list/5_img.jpg" alt="">
+								</div>
+								<div class="col-text">Съесть живые витамины</div>
+							</div>
+
+							<div class="col program-elem">
+								<div class="col-image">
+                                    <img src="img/list/6_img.jpg" alt="">
+								</div>
+								<div class="col-text">Посмотреть вечерний фильм</div>
+							</div>
+
+							<div class="col program-elem">
+								<div class="col-image">
+                                    <img src="img/list/7_img.jpg" alt="">
+								</div>
+								<div class="col-text">Поиграть в настольные игры</div>
+							</div>
+
+							<div class="col program-elem">
+								<div class="col-image">
+                                    <img src="img/list/8_img.jpg" alt="">
+								</div>
+								<div class="col-text">И в воллейбол</div>
+							</div>
+
+							<div class="col program-elem">
+								<div class="col-image">
+                                    <img src="img/list/9_img.jpg" alt="">
+								</div>
+								<div class="col-text">Беседовать обо всем за чашечкой чая</div>
+							</div>
+
+							<div class="col program-elem">
+								<div class="col-image">
+                                    <img src="img/list/10_img.jpg" alt="">
+								</div>
+								<div class="col-text">Съездить куда-нибудь, куда захочется</div>
+							</div>
+
+							<div class="col program-elem">
+								<div class="col-image">
+                                    <img src="img/list/11_img.jpg" alt="">
+								</div>
+								<div class="col-text">Кататься на лодке (резиновой)</div>
+							</div>
+
+							<div class="col program-elem">
+								<div class="col-image">
+                                    <img src="img/list/12_img.jpg" alt="">
+								</div>
+								<div class="col-text">Собирать грибы</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+        <section id="сalendar" class="сalendar">
+            <div class="container">
+                <div class="calendar-text">
+                    <p>
+                        Будем рады видеть вас в любое время до первого снега )))
+                    </p>
+                </div>
+                <div id="calengarParent" class="row">
+
+                </div>
+            </div>
+        </section>
+
+        <section class="weather-button">
+			<div class="container">
+				<div>
+					Если хотите сориентироваться по
+                    <a href="#modal">
+                        <div class="time__weather">
+                            погоде
+                        </div>
+                    </a>
+				</div>
+			</div>
+		</section>
+        
+        @@include('_footer.html',{})
+
+    </div>
+
+    <!-- Конец body -->
+
+	<!-- Модальники -->
+
+	<div class="large-img">
+
+	</div>
+
+	<div id="weather" class="weather">
+		<div class="viget">
+			<div class="header-viget">
+				<div class="close-viget"><a href="#closeX">X</a></div>
+			</div>
+			<div id="viget"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1c2264cc105dcd85dda0ab1065023e00861b5c53db84272052a2bac6ac0b946f&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+	
+</body>
+</html>

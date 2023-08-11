@@ -227,8 +227,8 @@ h6 {
 }
 
 .layer-1 {
-  -webkit-transform: translateZ(-55px) translateY(10px) scale(1.07);
-          transform: translateZ(-55px) translateY(10px) scale(1.07);
+  -webkit-transform: translateZ(-55px) translateY(10px) scale(0.55);
+          transform: translateZ(-55px) translateY(10px) scale(0.55);
 }
 
 .layer-12 {

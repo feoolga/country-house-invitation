@@ -24,6 +24,8 @@ const fonter = require('gulp-fonter-unx');  // для Linux
 const newer = require('gulp-newer');
 const browsersync = require('browser-sync').create();
 
+var ghPages = require('gulp-gh-pages');
+
 // Обновление браузера
 function browserSync(){
     browsersync.init({
@@ -189,6 +191,11 @@ function watchFiles(params){
 function clean(){
     return del(path.clean)
 }
+
+gulp.task('deploy', function() {
+    return gulp.src('./dist/**/*')
+      .pipe(ghPages());
+  });
 
 let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts))
 let watch = gulp.parallel(build, browserSync, watchFiles)

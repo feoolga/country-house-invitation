@@ -13,11 +13,16 @@
 	background-size: contain;
 	background-repeat: no-repeat;
 	position: absolute;
-	top: 35%;
+	top: calc(var(--index) * 2);
 	left: 50%;
-	transform: translate(-50%, -95%); 
+	transform: translate(-50%, 0); 
 	z-index: 1;
 	margin: 0 auto ;
+		// border: 2px black solid;
+}
+
+.hero__logo img{
+	width: 100%;
 }
 
 .hero__layers{
@@ -47,19 +52,19 @@
 }
 
 .layer-1{
-	transform: translateZ(-55px) translateY(10px) scale(.55);
+	transform: translateZ(-55px) translateY(10px) scale(0.85);
 }
 
 .layer-12{
-	transform: translateZ(-15px) scale(1.06);
+	transform: translateZ(-15px) scale(0.85);
 }
 
 .layer-13{
-	transform: translateZ(-20px) scale(1.06);
+	transform: translateZ(-10px) translateY(10px) scale(0.84);
 }
 
 .layer-2{
-	transform: translateZ(80px) translateX(-5px) translateY(70px) scale(.9);
+	transform: translateZ(80px) translateX(-5px) translateY(70px) translateX(-10px) scale(.7);
 }
 
 .layer-3{

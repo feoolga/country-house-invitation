@@ -346,9 +346,9 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-size: 20px;
   gap: 20px;
 }
@@ -468,9 +468,9 @@ h1 {
 }
 
 .col-image:hover {
-  -webkit-transform: scale(110%);
-      -ms-transform: scale(110%);
-          transform: scale(110%);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-box-shadow: 0 0 20px 10px white;
           box-shadow: 0 0 20px 10px white;
   cursor: pointer;

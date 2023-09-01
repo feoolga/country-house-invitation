@@ -16,7 +16,7 @@
 ;(function() {
 
     let blockLargeImg = document.querySelector('.large-img')
-    let srcImg = '/img/list/'
+    let srcImg = './img/list/'
 
     document.querySelectorAll('.col-image').forEach(function(item,index){
         item.addEventListener('click', function() {

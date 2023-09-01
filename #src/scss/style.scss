@@ -64,7 +64,7 @@ a{
 
 nav{
 	display: flex;
-	justify-content: end;
+	justify-content: space-between;
 	font-size: 20px;
 	gap: 20px;
 }
@@ -155,7 +155,7 @@ h1{
 }
 
 .col-image:hover{
-	transform: scale(110%);
+	transform: scale(1.1);
 	box-shadow: 0 0 20px 10px white;
 	cursor: pointer;
 }

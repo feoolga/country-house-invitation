@@ -1,0 +1,49 @@
+.hero__content-touch-large {
+
+    height: 100%;
+
+    background-image: url(/img/house/1_retina.webp);
+    background-size: cover;
+    background-position: center center;
+	background-repeat: no-repeat;
+
+    .hero__inner-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: calc(var(--index) * 5);
+    
+        .touch-large {
+    
+            &__logo {
+                width: calc(var(--index) * 13);
+                height: calc(var(--index) * 13);
+                img{
+                    width: 100%;
+                }
+            }
+        
+            &__content {
+                font-size: calc(var(--index) * 3);
+                text-align: center;
+                line-height: calc(var(--index) * 3.5);
+                margin: 0 calc(var(--index) * 7);
+                h1{
+                    text-shadow: 0 0 7px rgb(2, 56, 2);
+                }
+            }
+        }
+    }
+    
+}
+
+
+@media screen and (max-width:425px){
+    .hero__content-touch-large {
+    
+        background-image: url(/img/house/1_phone.webp);
+        gap: calc(var(--index) * 4);
+    
+    }
+}

@@ -130,12 +130,17 @@ if (weatherBlock) {
             return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
         }
     };
+
+    let heroParallax = document.querySelector('.hero__content-parallax')
+    let heroTouch = document.querySelector('.hero__content-touch-large')
     
-    // if (isMobile.any()) {
-    //     alert('is mobile !');
-    // } else {
-    //     alert('is computer !');
-    // }
+    if (isMobile.any()) {
+        heroParallax.classList.add('hide')
+        heroTouch.classList.add('show')
+    } else {
+        heroParallax.classList.add('show')
+        heroTouch.classList.add('hide')
+    }
 
 })();
 function Calendar(year, month) {

@@ -1,17 +1,19 @@
 .hero{
 	background-color: black;
 	font-family: "comfortaa-3d";
-	perspective: 1000px;
 	overflow: hidden;
-	position: relative;
+	height: 100vh;
 	// border: 2px black solid;
+}
+
+.hero__content-parallax{
+	perspective: 1000px;
+	position: relative;
 }
 
 .hero__logo{
 	width: calc(var(--index) * 13);
 	height: calc(var(--index) * 13);
-	background-size: contain;
-	background-repeat: no-repeat;
 	position: absolute;
 	top: calc(var(--index) * 2);
 	left: 50%;

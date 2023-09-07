@@ -8,6 +8,9 @@
     left: 0;
     opacity: 0;
     visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .large-img.open{
@@ -17,8 +20,6 @@
 
 .large-img__card{
     width: 70%;
-    height: auto;
-    margin: calc(var(--index) * 3) auto;
     border-radius: calc(var(--index) * 3);
     overflow: hidden;
 }

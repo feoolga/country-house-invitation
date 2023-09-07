@@ -62,11 +62,11 @@ a{
 	color: #fff;
 }
 
-nav{
+nav ul{
 	display: flex;
-	justify-content: space-between;
-	font-size: 20px;
-	gap: 20px;
+	justify-content: center;
+	font-size: calc(var(--index) * 1.1);
+	gap: calc(var(--index) * 2);
 }
 
 h1{
@@ -200,12 +200,6 @@ h1{
 
 	.logo {
 		display: none;
-	}
-
-	nav{
-		justify-content:space-between;
-		margin: 0 auto;
-	/* border: 1px solid black; */
 	}
 
 	.container{

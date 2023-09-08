@@ -38,6 +38,51 @@ footer {
   padding: 5px;
 }
 
+.hero__content-touch-large {
+  height: 100%;
+  background-image: url(/img/house/1_retina.webp);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.hero__content-touch-large .hero__inner-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: calc(var(--index) * 5);
+}
+
+.hero__content-touch-large .hero__inner-content .touch-large__logo {
+  width: calc(var(--index) * 13);
+  height: calc(var(--index) * 13);
+}
+
+.hero__content-touch-large .hero__inner-content .touch-large__logo img {
+  width: 100%;
+}
+
+.hero__content-touch-large .hero__inner-content .touch-large__content {
+  font-size: calc(var(--index) * 3);
+  text-align: center;
+  line-height: calc(var(--index) * 3.5);
+  margin: 0 calc(var(--index) * 7);
+}
+
+.hero__content-touch-large .hero__inner-content .touch-large__content h1 {
+  text-shadow: 0 0 7px rgb(2, 56, 2);
+}
+
 /* Большие картинки */
 
 .large-img {
@@ -49,6 +94,15 @@ footer {
   left: 0;
   opacity: 0;
   visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .large-img.open {
@@ -58,8 +112,6 @@ footer {
 
 .large-img__card {
   width: 70%;
-  height: auto;
-  margin: calc(var(--index) * 3) auto;
   border-radius: calc(var(--index) * 3);
   overflow: hidden;
 }
@@ -168,17 +220,19 @@ h6 {
 .hero {
   background-color: black;
   font-family: "comfortaa-3d";
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
   overflow: hidden;
+  height: 100vh;
+}
+
+.hero__content-parallax {
+  -webkit-perspective: 1200px;
+          perspective: 1200px;
   position: relative;
 }
 
 .hero__logo {
   width: calc(var(--index) * 13);
   height: calc(var(--index) * 13);
-  background-size: contain;
-  background-repeat: no-repeat;
   position: absolute;
   top: calc(var(--index) * 2);
   left: 50%;
@@ -342,15 +396,15 @@ a {
   color: #fff;
 }
 
-nav {
+nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  font-size: 20px;
-  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: calc(var(--index) * 1.1);
+  gap: calc(var(--index) * 2);
 }
 
 h1 {
@@ -386,6 +440,14 @@ h1 {
 .col {
   /* border: 1px solid red; */
   width: 220px;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
 }
 
 .programma {
@@ -750,14 +812,6 @@ h1 {
     display: none;
   }
 
-  nav {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin: 0 auto;
-    /* border: 1px solid black; */
-  }
-
   .container {
     width: 90%;
   }
@@ -780,6 +834,11 @@ h1 {
 
   footer .container {
     width: 95%;
+  }
+
+  .hero__content-touch-large {
+    background-image: url(/img/house/1_phone.webp);
+    gap: calc(var(--index) * 4);
   }
 
   .viget {

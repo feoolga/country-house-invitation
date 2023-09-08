@@ -108,7 +108,41 @@ if (weatherBlock) {
 
 })();
 
+;(function() {
 
+    let isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
+
+    let heroParallax = document.querySelector('.hero__content-parallax')
+    let heroTouch = document.querySelector('.hero__content-touch-large')
+    
+    if (isMobile.any()) {
+        heroParallax.classList.add('hide')
+        heroTouch.classList.add('show')
+    } else {
+        heroParallax.classList.add('show')
+        heroTouch.classList.add('hide')
+    }
+
+})();
 function Calendar(year, month) {
 
 	const calengarParent = document.querySelector('#calengarParent')

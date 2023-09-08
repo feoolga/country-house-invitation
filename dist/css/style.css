@@ -40,7 +40,7 @@ footer {
 
 .hero__content-touch-large {
   height: 100%;
-  background-image: url(./img/house/1_retina.webp);
+  background-image: url(../img/house/1_retina.webp);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -837,7 +837,7 @@ h1 {
   }
 
   .hero__content-touch-large {
-    background-image: url(./img/house/1_phone.webp);
+    background-image: url(../img/house/1_phone.webp);
     gap: calc(var(--index) * 4);
   }
 

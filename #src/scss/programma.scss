@@ -1,0 +1,91 @@
+.programma{
+	background-color: rgb(124,155,28);
+	background-size: 200px;
+	background-blend-mode:screen;
+}
+
+.programma-container{
+	background-color: rgba(113, 143, 22, 0.6);
+	padding: calc(var(--index) * 3);
+}
+
+.title-text-light{
+	background-color: rgb(217, 245, 133);
+	padding: 5px 0 3px;
+	font-size: 25px;
+	color: rgb(124,155,28);
+	font-family: 'Neucha', cursive;
+	
+	@media screen and (max-width:768px){
+		padding: 5px 0 3px;
+		font-size: 20px;
+	}
+}
+
+.list .container {
+	padding: 15px;
+}
+
+.list__row{
+	flex-wrap: wrap;
+	gap: 40px 40px;
+	justify-content: center;
+	align-items: start;
+}
+
+.program-elem{
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	text-align: center;
+	gap: 20px;
+}
+
+.col-image{
+	flex-grow: 0;
+	flex-shrink: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: aqua;
+    box-shadow: 0 0 15px 5px white;
+	overflow: hidden;
+	margin-right: 10px;
+	display: flex;
+	justify-content: center;
+	transition: all 0.5s;
+}
+
+.col-image:hover{
+	transform: scale(1.1);
+	box-shadow: 0 0 20px 10px white;
+	cursor: pointer;
+}
+
+.col-image img{
+    height: 100%;
+}
+
+.col-image.opened{
+	z-index: 2;
+	width: 400px;
+    height: 300px;
+	border-radius: 0;
+
+	overflow: hidden;
+	margin: 100px;
+	/* position: absolute;
+	top: 10%;
+	left: 40%; */
+}
+
+.col-text{
+	/* border: 1px solid black; */
+	font-family: 'Neucha', cursive;
+	font-size: 22px;
+	flex: 1 1 50%;
+    color: white;
+}
+
+

@@ -1,3 +1,105 @@
+.hero{
+	background-color: black;
+	font-family: "comfortaa-3d";
+	overflow: hidden;
+	height: 100vh;
+	// border: 2px black solid;
+}
+
+.hero__content-parallax{
+	perspective: 1200px;
+	position: relative;
+}
+
+.hero__logo{
+	width: calc(var(--index) * 13);
+	height: calc(var(--index) * 13);
+	position: absolute;
+	top: calc(var(--index) * 2);
+	left: 50%;
+	transform: translate(-50%, 0); 
+	z-index: 1;
+	margin: 0 auto ;
+		// border: 2px black solid;
+}
+
+.hero__logo img{
+	width: 100%;
+}
+
+.hero__layers{
+	height: 100vh;
+	transform-style: preserve-3d;
+	transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+	perspective-origin: bottom center;
+	will-change: transform;
+	transition: transform var(--transition);
+}
+
+.layers__item{
+	position: absolute;
+	inset: -5vw;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero__content{
+	font-size: calc(var(--index) * 3.5);
+	text-align: center;
+	line-height: calc(var(--index) * 3.5);
+	// margin: 0 calc(var(--index) * 11);
+}
+
+.layer-1{
+	transform: translateZ(-55px) translateY(10px) scale(0.85);
+}
+
+.layer-12{
+	transform: translateZ(-15px) scale(0.85);
+}
+
+.layer-13{
+	transform: translateZ(-10px) translateY(10px) scale(0.84);
+}
+
+.layer-2{
+	transform: translateZ(80px) translateX(-5px) translateY(70px) translateX(-10px) scale(.7);
+}
+
+.layer-3{
+	transform: translateZ(180px) scale(.88);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.layer-4{
+	transform: translateZ(190px) scale(.9);
+}
+
+.layer-5{
+	transform: translateZ(300px) scale(.9);
+}
+
+.layer-6{
+	transform: translateZ(380px);
+}
+.layer-4, .layer-5, .layer-6 {
+	pointer-events: none;
+}
+
+@media screen and (max-width:768px){
+	.hero__content{
+		font-size: calc(var(--index) * 3.5);
+		text-align: center;
+		line-height: calc(var(--index) * 4);
+		margin: 0 calc(var(--index) * 5);
+	}
+}
+
 .hero__content-touch-large {
 
     height: 100%;
@@ -37,7 +139,6 @@
     }
     
 }
-
 
 @media screen and (max-width:425px){
     .hero__content-touch-large {

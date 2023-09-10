@@ -1,0 +1,52 @@
+:root {
+	--index: calc(1vw + 1vh);
+	--transition: .5s cubic-besier(.05, .5, 0, 1);
+}
+
+a{
+	color: #fff;
+}
+
+h1{
+	margin-top: calc(var(--index) * -5);
+}
+
+.wrapper{
+	width: 100%;
+	font-family: 'Caveat', cursive;
+	font-size: 30px;
+	color: white;
+}
+
+.container{
+	width: 65%;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 1;
+}
+
+.row{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.col{
+	width: 220px;
+}
+
+.show{
+	display: block;
+}
+
+.hide{
+	display: none;
+}
+
+@media screen and (max-width:768px){
+
+	.container{
+		width: 90%;
+	}
+
+}

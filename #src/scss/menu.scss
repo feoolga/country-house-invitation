@@ -1,0 +1,22 @@
+.menu{
+	background-color: rgb(124,155,28);
+}
+
+nav ul{
+	display: flex;
+	justify-content: center;
+	font-size: calc(var(--index) * 1.1);
+	gap: calc(var(--index) * 2);
+}
+
+@media screen and (max-width:768px){
+	.menu{
+		position: sticky;
+		top: 0;
+		left: 0;
+	}
+
+	.nav-menu .container {
+		width: 95%;
+	}
+}

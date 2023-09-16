@@ -1,0 +1,40 @@
+.preloader{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    opacity: 1;
+    transition: all .5s linear;
+}
+
+.load__elem{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border-top: 10px solid #fff;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 10px solid #97ffa7;
+    animation: loader 1.5s infinite linear;
+}
+
+.hide{
+    visibility: hidden;
+    opacity: 0;
+}
+
+@keyframes loader{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

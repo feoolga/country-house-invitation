@@ -1,3 +1,8 @@
+let preloader = document.querySelector('#preloader')
+window.onload = function(){
+    preloader.remove()
+}
+
 ;(function() {
 
     let sectionParallax = document.querySelector('.hero')

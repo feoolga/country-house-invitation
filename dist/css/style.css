@@ -571,6 +571,70 @@ nav ul {
           box-shadow: rgb(166, 184, 113) 0 0 25px;
 }
 
+.preloader {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.load__elem {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border-top: 10px solid #fff;
+  border-left: transparent;
+  border-right: transparent;
+  border-bottom: 10px solid #97ffa7;
+  -webkit-animation: loader 1.5s infinite linear;
+          animation: loader 1.5s infinite linear;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+@-webkit-keyframes loader {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 .programma {
   background-color: rgb(124, 155, 28);
   background-size: 200px;

@@ -161,6 +161,29 @@ h1 {
   display: none;
 }
 
+.btn_up {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  position: fixed;
+  right: calc(var(--index) * 1.5);
+  bottom: calc(var(--index) * 1.5);
+  background-color: rgba(70, 99, 70, 0.5);
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn_up__arrow {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
+  -webkit-transform: rotate(225deg);
+      -ms-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
 /* Календарь */
 
 .сalendar {
@@ -793,6 +816,11 @@ nav ul {
     width: 90%;
   }
 
+  .btn_up {
+    width: 55px;
+    height: 55px;
+  }
+
   footer .row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -858,5 +886,16 @@ nav ul {
 
   .viget {
     max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    width: 95%;
+  }
+
+  .btn_up {
+    width: 50px;
+    height: 50px;
   }
 }

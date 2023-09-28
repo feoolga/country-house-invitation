@@ -43,7 +43,7 @@ h1{
 	display: none;
 }
 
-.btn_up{
+.btn-up{
 	width: 65px;
 	height: 65px;
 	border-radius: 50%;
@@ -52,16 +52,32 @@ h1{
 	bottom: calc(var(--index)*1.5);
 	background-color: rgba(70, 99, 70, 0.5);
 	cursor: pointer;
-	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
-.btn_up__arrow{
-	display: inline-block;
-	width: 30px;
-	height: 30px;
-	border-bottom: 3px solid white;
-	border-right: 3px solid white;
-	transform: rotate(225deg);
+.btn-up_hide{
+	display: none;
+}
+
+.arrow1{
+	transform: translate(0,25%);
+	fill:none;
+	stroke:#617459;
+	stroke-width:3;
+	stroke-linecap:round;
+	opacity:0.5;
+}
+
+.arrow2{
+	transform: translate(0,-25%);
+	fill:none;
+	stroke:#617459;
+	stroke-width:3;
+	stroke-linecap:round;
+	opacity:0.5;
 }
 
 @media screen and (max-width:768px){

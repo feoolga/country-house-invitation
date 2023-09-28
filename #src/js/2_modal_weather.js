@@ -6,7 +6,7 @@ let months = ["Января", "Февраля", "Марта", "Апреля", "�
 let date = new Date()
 let today = date.getDate() + ' ' + months[date.getMonth()]
 
-const openWeather = document.querySelector('.time__weather')
+const openWeather = document.querySelector('.weather-button')
 openWeather.addEventListener('click', function(){
 	modalBlock.classList.add('open')
 })

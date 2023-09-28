@@ -1,35 +1,62 @@
-.weather-button{
+.weather-block{
 	background-color: rgb(127, 164, 189);
 	padding: 20px;
 
 }
 
-.time__weather{
+.weather-button{
 	display: inline-block;
 	font-family: 'Neucha', cursive;
 	display: inline-block;
 	font-size: 30px;
 	color: rgb(44, 86, 122);
-	/* transform-origin: bottom left; */
-	transition: transform 0.2s;
 	padding-left: 7px;
 	position: relative;
+	opacity: 1;
 }
 
-.time__weather::after{
+.weather-button span{
+	position: relative;
+	z-index: 2;
+}
+
+.weather-button::after{
 	content: '';
 	background-image: url(../img/cloud.gif);
 	background-size:60px;
 	background-repeat: no-repeat;
-	position: absolute;
 	width: 60px;
 	height: 60px;
+	position: absolute;
 	top: -10px;
 	right: 10px;
-	transition: translate 0.4s, opacity 0.4s;
+	z-index: 1;
+	transition: opacity 0.4s;
 }
 
-.time__weather:hover::after{
-	transform: translate(0, -30px);
+.weather-button::before{
+	content: '';
+	background-image: url(../img/sun.webp);
+	background-size:60px;
+	background-repeat: no-repeat;
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	top: -15px;
+	right: 10px;
+	z-index: 1;
+	opacity: 0;
+	transition: opacity 0.4s;
+}
+
+.weather-button:hover::after{
+	opacity: 0;
+}
+
+.weather-button:hover::before{
+	opacity: 1;
+}
+
+.weather-button:visited::before{
 	opacity: 0;
 }

@@ -77,6 +77,31 @@ window.onload = function(){
     }
 
 })();
+
+const btnUp = {
+    el: document.querySelector('.btn-up'),
+    show() {
+      this.el.classList.remove('btn-up_hide');
+    },
+    hide() {
+      this.el.classList.add('btn-up_hide');
+    },
+    addEventListener() {
+      window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY || document.documentElement.scrollTop;
+        scrollY > 400 ? this.show() : this.hide();
+      });
+      document.querySelector('.btn-up').onclick = () => {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'smooth'
+        });
+      }
+    }
+  }
+  
+  btnUp.addEventListener();
 const modalBlock = document.querySelector('#weather')
 const weatherBlock = document.querySelector('#viget')
 const gismeteo = 'https://www.gismeteo.ru/weather-timiryazevo-133937/month/'
@@ -85,7 +110,7 @@ let months = ["Января", "Февраля", "Марта", "Апреля", "�
 let date = new Date()
 let today = date.getDate() + ' ' + months[date.getMonth()]
 
-const openWeather = document.querySelector('.time__weather')
+const openWeather = document.querySelector('.weather-button')
 openWeather.addEventListener('click', function(){
 	modalBlock.classList.add('open')
 })

@@ -161,7 +161,7 @@ h1 {
   display: none;
 }
 
-.btn_up {
+.btn-up {
   width: 65px;
   height: 65px;
   border-radius: 50%;
@@ -170,18 +170,45 @@ h1 {
   bottom: calc(var(--index) * 1.5);
   background-color: rgba(70, 99, 70, 0.5);
   cursor: pointer;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.btn_up__arrow {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  border-bottom: 3px solid white;
-  border-right: 3px solid white;
-  -webkit-transform: rotate(225deg);
-      -ms-transform: rotate(225deg);
-          transform: rotate(225deg);
+.btn-up_hide {
+  display: none;
+}
+
+.arrow1 {
+  -webkit-transform: translate(0, 25%);
+      -ms-transform: translate(0, 25%);
+          transform: translate(0, 25%);
+  fill: none;
+  stroke: #617459;
+  stroke-width: 3;
+  stroke-linecap: round;
+  opacity: 0.5;
+}
+
+.arrow2 {
+  -webkit-transform: translate(0, -25%);
+      -ms-transform: translate(0, -25%);
+          transform: translate(0, -25%);
+  fill: none;
+  stroke: #617459;
+  stroke-width: 3;
+  stroke-linecap: round;
+  opacity: 0.5;
 }
 
 /* Календарь */
@@ -507,6 +534,7 @@ nav ul {
   opacity: 0;
   visibility: hidden;
   background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
 }
 
 .weather.open {
@@ -770,44 +798,67 @@ nav ul {
   color: white;
 }
 
-.weather-button {
+.weather-block {
   background-color: rgb(127, 164, 189);
   padding: 20px;
 }
 
-.time__weather {
+.weather-button {
   display: inline-block;
   font-family: "Neucha", cursive;
   display: inline-block;
   font-size: 30px;
   color: rgb(44, 86, 122);
-  /* transform-origin: bottom left; */
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
   padding-left: 7px;
   position: relative;
+  opacity: 1;
 }
 
-.time__weather::after {
+.weather-button span {
+  position: relative;
+  z-index: 2;
+}
+
+.weather-button::after {
   content: "";
   background-image: url(../img/cloud.gif);
   background-size: 60px;
   background-repeat: no-repeat;
-  position: absolute;
   width: 60px;
   height: 60px;
+  position: absolute;
   top: -10px;
   right: 10px;
-  -webkit-transition: translate 0.4s, opacity 0.4s;
-  transition: translate 0.4s, opacity 0.4s;
+  z-index: 1;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
 }
 
-.time__weather:hover::after {
-  -webkit-transform: translate(0, -30px);
-      -ms-transform: translate(0, -30px);
-          transform: translate(0, -30px);
+.weather-button::before {
+  content: "";
+  background-image: url(../img/sun.webp);
+  background-size: 60px;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: -15px;
+  right: 10px;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.weather-button:hover::after {
+  opacity: 0;
+}
+
+.weather-button:hover::before {
+  opacity: 1;
+}
+
+.weather-button:visited::before {
   opacity: 0;
 }
 

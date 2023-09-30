@@ -373,43 +373,24 @@ footer {
           transform: translateZ(-55px) translateY(10px) scale(0.85);
 }
 
-.layer-12 {
+.layer-2 {
   -webkit-transform: translateZ(-15px) scale(0.85);
           transform: translateZ(-15px) scale(0.85);
 }
 
-.layer-13 {
+.layer-3 {
   -webkit-transform: translateZ(-10px) translateY(10px) scale(0.84);
           transform: translateZ(-10px) translateY(10px) scale(0.84);
 }
 
-.layer-2 {
+.layer-4 {
   -webkit-transform: translateZ(80px) translateX(-5px) translateY(70px) translateX(-10px) scale(0.7);
           transform: translateZ(80px) translateX(-5px) translateY(70px) translateX(-10px) scale(0.7);
 }
 
-.layer-3 {
+.layer-5 {
   -webkit-transform: translateZ(180px) scale(0.88);
           transform: translateZ(180px) scale(0.88);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.layer-4 {
-  -webkit-transform: translateZ(190px) scale(0.9);
-          transform: translateZ(190px) scale(0.9);
-}
-
-.layer-5 {
-  -webkit-transform: translateZ(300px) scale(0.9);
-          transform: translateZ(300px) scale(0.9);
 }
 
 .layer-6 {
@@ -512,6 +493,8 @@ footer {
 
 .menu {
   background-color: rgb(124, 155, 28);
+  font-size: 24px;
+  padding: 5px 0 10px;
 }
 
 nav ul {
@@ -521,8 +504,28 @@ nav ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: calc(var(--index) * 1.1);
-  gap: calc(var(--index) * 2);
+  gap: calc(var(--index) * 1.8);
+}
+
+.menu__link {
+  position: relative;
+}
+
+.menu__link::after {
+  content: "";
+  background-color: white;
+  width: 0%;
+  height: 1px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.menu__link:hover::after {
+  left: 0%;
+  width: 100%;
 }
 
 .weather {
@@ -628,7 +631,7 @@ nav ul {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #000;
+  background-color: #a1d877;
   z-index: 100;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -699,7 +702,7 @@ nav ul {
 
 .title-text-light {
   background-color: rgb(217, 245, 133);
-  padding: 5px 0 3px;
+  padding: 7px 0 5px;
   font-size: 25px;
   color: rgb(124, 155, 28);
   font-family: "Neucha", cursive;
@@ -909,6 +912,7 @@ nav ul {
     position: sticky;
     top: 0;
     left: 0;
+    font-size: 20px;
   }
 
   .nav-menu .container {
@@ -937,6 +941,12 @@ nav ul {
 
   .viget {
     max-width: 80%;
+  }
+}
+
+@media (max-width: 425px) {
+  .menu {
+    font-size: 18px;
   }
 }
 

@@ -1,12 +1,35 @@
 .menu{
 	background-color: rgb(124,155,28);
+	font-size: 24px;
+	padding: 5px 0 10px;
 }
 
 nav ul{
 	display: flex;
 	justify-content: center;
-	font-size: calc(var(--index) * 1.1);
-	gap: calc(var(--index) * 2);
+	gap: calc(var(--index) * 1.8);
+}
+
+.menu__link{
+	position: relative;
+}
+
+.menu__link::after{
+	content: '';
+	background-color: white;
+	width: 0%;
+	height: 1px;
+	// transform: scale(0,1);
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transition: all .2s linear;
+}
+
+.menu__link:hover::after{
+	// transform: scale(1,1);
+	left: 0%;
+	width: 100%;
 }
 
 @media screen and (max-width:768px){
@@ -14,9 +37,17 @@ nav ul{
 		position: sticky;
 		top: 0;
 		left: 0;
+		font-size: 20px;
 	}
 
 	.nav-menu .container {
 		width: 95%;
+	}
+
+}
+
+@media(max-width:425px){
+	.menu{
+		font-size: 18px;
 	}
 }

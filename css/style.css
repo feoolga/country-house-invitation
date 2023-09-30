@@ -161,6 +161,56 @@ h1 {
   display: none;
 }
 
+.btn-up {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  position: fixed;
+  right: calc(var(--index) * 1.5);
+  bottom: calc(var(--index) * 1.5);
+  background-color: rgba(70, 99, 70, 0.5);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.btn-up_hide {
+  display: none;
+}
+
+.arrow1 {
+  -webkit-transform: translate(0, 25%);
+      -ms-transform: translate(0, 25%);
+          transform: translate(0, 25%);
+  fill: none;
+  stroke: #617459;
+  stroke-width: 3;
+  stroke-linecap: round;
+  opacity: 0.5;
+}
+
+.arrow2 {
+  -webkit-transform: translate(0, -25%);
+      -ms-transform: translate(0, -25%);
+          transform: translate(0, -25%);
+  fill: none;
+  stroke: #617459;
+  stroke-width: 3;
+  stroke-linecap: round;
+  opacity: 0.5;
+}
+
 /* Календарь */
 
 .сalendar {
@@ -323,43 +373,24 @@ footer {
           transform: translateZ(-55px) translateY(10px) scale(0.85);
 }
 
-.layer-12 {
+.layer-2 {
   -webkit-transform: translateZ(-15px) scale(0.85);
           transform: translateZ(-15px) scale(0.85);
 }
 
-.layer-13 {
+.layer-3 {
   -webkit-transform: translateZ(-10px) translateY(10px) scale(0.84);
           transform: translateZ(-10px) translateY(10px) scale(0.84);
 }
 
-.layer-2 {
+.layer-4 {
   -webkit-transform: translateZ(80px) translateX(-5px) translateY(70px) translateX(-10px) scale(0.7);
           transform: translateZ(80px) translateX(-5px) translateY(70px) translateX(-10px) scale(0.7);
 }
 
-.layer-3 {
+.layer-5 {
   -webkit-transform: translateZ(180px) scale(0.88);
           transform: translateZ(180px) scale(0.88);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.layer-4 {
-  -webkit-transform: translateZ(190px) scale(0.9);
-          transform: translateZ(190px) scale(0.9);
-}
-
-.layer-5 {
-  -webkit-transform: translateZ(300px) scale(0.9);
-          transform: translateZ(300px) scale(0.9);
 }
 
 .layer-6 {
@@ -462,6 +493,8 @@ footer {
 
 .menu {
   background-color: rgb(124, 155, 28);
+  font-size: 24px;
+  padding: 5px 0 10px;
 }
 
 nav ul {
@@ -471,8 +504,28 @@ nav ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: calc(var(--index) * 1.1);
-  gap: calc(var(--index) * 2);
+  gap: calc(var(--index) * 1.8);
+}
+
+.menu__link {
+  position: relative;
+}
+
+.menu__link::after {
+  content: "";
+  background-color: white;
+  width: 0%;
+  height: 1px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.menu__link:hover::after {
+  left: 0%;
+  width: 100%;
 }
 
 .weather {
@@ -484,6 +537,7 @@ nav ul {
   opacity: 0;
   visibility: hidden;
   background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
 }
 
 .weather.open {
@@ -577,7 +631,7 @@ nav ul {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #000;
+  background-color: #a1d877;
   z-index: 100;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -648,7 +702,7 @@ nav ul {
 
 .title-text-light {
   background-color: rgb(217, 245, 133);
-  padding: 5px 0 3px;
+  padding: 7px 0 5px;
   font-size: 25px;
   color: rgb(124, 155, 28);
   font-family: "Neucha", cursive;
@@ -747,50 +801,78 @@ nav ul {
   color: white;
 }
 
-.weather-button {
+.weather-block {
   background-color: rgb(127, 164, 189);
   padding: 20px;
 }
 
-.time__weather {
+.weather-button {
   display: inline-block;
   font-family: "Neucha", cursive;
   display: inline-block;
   font-size: 30px;
   color: rgb(44, 86, 122);
-  /* transform-origin: bottom left; */
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
   padding-left: 7px;
   position: relative;
+  opacity: 1;
 }
 
-.time__weather::after {
+.weather-button span {
+  position: relative;
+  z-index: 2;
+}
+
+.weather-button::after {
   content: "";
   background-image: url(../img/cloud.gif);
   background-size: 60px;
   background-repeat: no-repeat;
-  position: absolute;
   width: 60px;
   height: 60px;
+  position: absolute;
   top: -10px;
   right: 10px;
-  -webkit-transition: translate 0.4s, opacity 0.4s;
-  transition: translate 0.4s, opacity 0.4s;
+  z-index: 1;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
 }
 
-.time__weather:hover::after {
-  -webkit-transform: translate(0, -30px);
-      -ms-transform: translate(0, -30px);
-          transform: translate(0, -30px);
+.weather-button::before {
+  content: "";
+  background-image: url(../img/sun.webp);
+  background-size: 60px;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: -15px;
+  right: 10px;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.weather-button:hover::after {
+  opacity: 0;
+}
+
+.weather-button:hover::before {
+  opacity: 1;
+}
+
+.weather-button:visited::before {
   opacity: 0;
 }
 
 @media screen and (max-width: 768px) {
   .container {
     width: 90%;
+  }
+
+  .btn_up {
+    width: 55px;
+    height: 55px;
   }
 
   footer .row {
@@ -830,6 +912,7 @@ nav ul {
     position: sticky;
     top: 0;
     left: 0;
+    font-size: 20px;
   }
 
   .nav-menu .container {
@@ -858,5 +941,22 @@ nav ul {
 
   .viget {
     max-width: 80%;
+  }
+}
+
+@media (max-width: 425px) {
+  .menu {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    width: 95%;
+  }
+
+  .btn_up {
+    width: 50px;
+    height: 50px;
   }
 }
